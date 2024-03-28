@@ -130,7 +130,7 @@ The server listens on port 443 (for HTTPS traffic) and on port 80 (to redirect t
 
 The server is fully stateless and doesn't require any storage. It caches the wireguard private key and recent peers on disk to enable instant reconnection of tunnels after server restart. The tunwg client will add itself as peer again if the wireguard handshake with server is missed.
 
-If you're running it behind a reverse proxy like caddy/nginx, you should make sure that the reverse proxy passes through TLS instead of decrypting HTTPS traffic.
+If you're running it behind a reverse proxy like caddy/nginx, you should ensure TLS pass-through, instead of decrypting HTTPS traffic.
 
 ## Internal Details
 
